@@ -35,3 +35,4 @@ dfs(visited, graph, '5')
 
 
 ### Result:
+Thus the depth first search order was found sucessfully.
