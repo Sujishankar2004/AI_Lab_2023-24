@@ -21,7 +21,7 @@ Construct the FOL representation for the following sentences <br>
 5.	 Bill eats peanuts  <br> 
    Convert into clause form and Prove that John like Apple by using Prolog. <br> 
 ### Program:
-``
+```
 likes(john,X):-
 	food(X).
 eats(bill,X):-
@@ -32,7 +32,7 @@ eats(bill,peanuts).
 food(apple).
 food(chicken).
 food(peanuts).
-``
+```
 
 
 ### Output:
