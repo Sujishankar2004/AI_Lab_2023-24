@@ -49,12 +49,12 @@ Convert the facts in predicate form to clauses and then prove by resolution: “
 
 ### Program:
 ```
-likes(steve,X):-
-     easycourse(X).
-hard(sciencecourse).
-easycourse(X):-
-          course(X,dept(havefun)).
-course(bk301,dept(havefun)).
+likes(steve, X) :-
+ easy_course(X).
+hard_course(science).
+easy_course(X) :-
+ in_department(X, have_fun).
+in_department(bk301, have_fun).
 ```
 
 
