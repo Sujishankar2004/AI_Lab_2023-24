@@ -1,5 +1,5 @@
 # Ex.No: 11  Planning –  Block World Problem 
-### DATE:15.04.2025                                                                           
+### DATE: 15/04/25                                                                           
 ### REGISTER NUMBER : 212222220028
 ### AIM: 
 To find the sequence of plan for Block word problem using PDDL  
@@ -40,34 +40,35 @@ Step 10 : Obtain the plan for given problem.<br>
   :effect (and (arm-empty) (clear ?ob) (on ?ob ?underob)
                (not (clear ?underob)) (not (holding ?ob))))
 (:action unstack
-  :parameters  (?ob ?underob)
+  :parameters (?ob ?underob)
   :precondition (and (on ?ob ?underob) (clear ?ob) (arm-empty))
   :effect (and (holding ?ob) (clear ?underob)
-               (not (on ?ob ?underob)) (not (clear ?ob)) (not (arm-empty)))))
+               (not (on ?ob ?underob)) (not (clear ?ob)) (not (arm-empty)))))
 ```
-### Input 
+
+
+
+
+
+
+
+
+
+### Input :
 ```
 (define (problem pb1)
    (:domain blocksworld)
    (:objects a b)
    (:init (on-table a) (on-table b)  (clear a)  (clear b) (arm-empty))
-   (:goal (and (on a b))))
+   (:goal (and (on a b))))
 ```
-### Output/Plan:
-![image](https://github.com/rajalakshmi8248/AI_Lab_2023-24/assets/122860827/65d71f2f-9be0-424a-9bf4-76b07c05f819)
 
-### Input 
-PROBLEM2:roblem.pddl
-```
-(define(problem pb3)
-	   (:domain blocksworld)
-	   (:objects a b c)
-	   (:init (on-table a) (on-table b)   (on-table c)  
-	          (clear a)  (clear b) (clear c) (arm-empty))
-	   (:goal (and (on a b) (on b c))))
-```
 ### Output/Plan:
-![image](https://github.com/rajalakshmi8248/AI_Lab_2023-24/assets/122860827/e865df07-c51a-40f2-8332-f480866df8de)
+![Screenshot 2024-04-29 091037](https://github.com/Vikhram-S/AI_Lab_2023-24/assets/146576573/d4f22e91-acf9-4a1d-bd18-6a42f29cfeb0)
+![Screenshot 2024-04-29 091057](https://github.com/Vikhram-S/AI_Lab_2023-24/assets/146576573/4e1e15ca-0d75-4e77-8ba1-2be2364352cd)
+
+
+
 
 
 ### Result:
