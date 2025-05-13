@@ -66,7 +66,8 @@ print(classification_report(y_test, y_pred))
 
 
 ### Output:
-https://1drv.ms/i/c/0d2b16cabfe83472/EUWhmCuwgJ5IoDBRw0QuUzIBqu9rnVWwZkq9pBPCcIi2YQ?e=fpbCId
+"C:\Users\SEC\Pictures\Screenshots\Screenshot 2025-05-13 102306.png"
+
 
 
 ### Result:
