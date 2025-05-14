@@ -24,11 +24,9 @@ Predict on the test set.
 
 7.Evaluate
 
-    Print accuracy
-
-    Show confusion matrix
-
-    Display classification report (precision, recall, F1-score)
+ 1 Print accuracy
+ 2  Show confusion matrix
+ 3  Display classification report (precision, recall, F1-score)
 
 ### Program:
 ```
@@ -66,7 +64,7 @@ plt.ylabel('Actual')
 plt.show()
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
-
+```
 
 
 ### Output:
