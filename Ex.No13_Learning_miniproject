@@ -1,72 +1,62 @@
+# Ex.No: 1  Implementation of Breadth First Search 
+### DATE: 07-03-2025                                                                           
+### REGISTER NUMBER :212222040164
+### AIM: 
+To write a python program to implement Breadth first Search. 
+### Algorithm:
+1. Start the program
+2. Create the graph by using adjacency list representation
+3. Define a function bfs and take the set “visited” is empty and “queue” is empty
+4. Search start with initial node and add the node to visited and queue.
+5. For each neighbor node, check node is not in visited then add node to visited and queue list.
+6.  Creating loop to print the visited node.
+7.   Call the bfs function by passing arguments visited, graph and starting node.
+8.   Stop the program.
+### Program:
+```py
+# Breadth-First Search (BFS) in Python
+graph = {
+    '5': ['3', '7'],
+    '3': ['2', '4'],
+    '7': ['8'],
+    '2': [],
+    '4': ['8'],
+    '8': []
+}
 
-Ex.No: 13 Learning_miniproject 
-DATE:13-05-2025                                                                           
-REGISTER NUMBER :  212222040164
- AIM: 
-To write a program to train the classifier for Blood Donation service center.
-Algorithm:
-1.Import libraries
-(pandas, sklearn, matplotlib, seaborn)
+visited = []  # List for visited nodes.
+queue = []  # Initialize a queue
 
-2.Load the dataset
-Read transfusion.csv using pandas.
+def bfs(visited, graph, node):  # Function for BFS
+    visited.append(node)
+    queue.append(node)
 
-3.Rename columns
-Set column names to Recency, Frequency, Monetary, Time, Donated.
+    while queue:  # Creating loop to visit each node
+        m = queue.pop(0) 
+        print(m, end=" ")  # Print visited node
+        
+        for neighbour in graph[m]:
+            if neighbour not in visited:
+                visited.append(neighbour)
+                queue.append(neighbour)
 
-4.Split data
-Separate features (X) and target (y), then split into training and testing sets.
-
-5.Train model
-Use RandomForestClassifier and train it with the training data.
-
-6.Make predictions
-Predict on the test set.
-
-7.Evaluate
-
- 1 Print accuracy
- 2  Show confusion matrix
- 3  Display classification report (precision, recall, F1-score)
-
-Program:
+# Driver Code
+print("Following is the Breadth-First Search:")
+bfs(visited, graph, '5')  # Function calling
 ```
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-import matplotlib.pyplot as plt
-import seaborn as sns
 
-df = pd.read_csv('/content/transfusion.csv')
-df.columns = ['Recency', 'Frequency', 'Monetary', 'Time', 'Donated']
-X = df.drop('Donated', axis=1)
-y = df['Donated']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42
 
-train_size = len(X_train)
-test_size = len(X_test)
-print(f"Total samples: {len(df)}")
-print(f"Training samples: {train_size}")
-print(f"Testing samples: {test_size}")
 
-model = RandomForestClassifier(n_estimators=100, random_state=42)
-model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
-accuracy = accuracy_score(y_test, y_pred)
-print(f"Accuracy: {accuracy * 100:.2f}%")
 
-cm = confusion_matrix(y_test, y_pred)
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
 
-plt.title('Confusion Matrix')
-plt.xlabel('Predicted')
-plt.ylabel('Actual')
-plt.show()
-print("\nClassification Report:")
-print(classification_report(y_test, y_pred))
-```
-Output:
-![Screenshot 2025-05-13 102306 - Copy](https://github.com/user-attachments/assets/98deca84-a460-46e0-9379-a9686ecd1963)
-Result:
-Thus the system was trained successfully and the prediction was carried out.
+
+
+
+
+
+### Output:
+![image](https://github.com/user-attachments/assets/dcd32028-402a-4ea0-8e99-f62da731a985)
+
+
+### Result:
+Thus the breadth first search order was found sucessfully.
