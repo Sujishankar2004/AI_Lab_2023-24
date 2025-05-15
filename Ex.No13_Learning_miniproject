@@ -1,10 +1,10 @@
 
-# Ex.No: 13 Learning_miniproject 
-### DATE:13-05-2025                                                                           
-### REGISTER NUMBER :  212222040164
-### AIM: 
+Ex.No: 13 Learning_miniproject 
+DATE:13-05-2025                                                                           
+REGISTER NUMBER :  212222040164
+ AIM: 
 To write a program to train the classifier for Blood Donation service center.
-###  Algorithm:
+Algorithm:
 1.Import libraries
 (pandas, sklearn, matplotlib, seaborn)
 
@@ -29,7 +29,7 @@ Predict on the test set.
  2  Show confusion matrix
  3  Display classification report (precision, recall, F1-score)
 
-### Program:
+Program:
 ```
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -66,13 +66,7 @@ plt.show()
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
 ```
-
-
-### Output:
+Output:
 ![Screenshot 2025-05-13 102306 - Copy](https://github.com/user-attachments/assets/98deca84-a460-46e0-9379-a9686ecd1963)
-
-
-
-
-### Result:
+Result:
 Thus the system was trained successfully and the prediction was carried out.
