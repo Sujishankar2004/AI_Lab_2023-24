@@ -1,6 +1,6 @@
 # Ex.No: 13 Learning_miniproject 
 ### DATE:13.5.2025                                                                            
-### REGISTER NUMBER :212222220028 
+### REGISTER NUMBER :212222040164 
 ### AIM: 
 To write a program to train the classifier for Blood Donation service center.
 ###  Algorithm:
